@@ -1,5 +1,126 @@
 h1.  Leveraging Chef-Solo for Less than Enterprise Scale Deployments
 
+Some context:
+
+      Started at HMS: "here's a screw driver, your desk is in that box, there are
+                       your 2 computers here are the install disks"
+    
+          Up and running later that afternoon...the other guy not so much...
+    
+    
+      My use of Chef started when I was at Algorithmics:
+    
+         joined a team of 2 as the 3rd person.
+    
+         single dev machine set up
+    
+         "Uh, here's the ubuntu ISO, and I think you need Rails, RabbitMQ, and ..."
+
+      At this point my personality balks at repetetive tasks.  I'm alergic, honest I am! :)
+
+      Chef and Puppet seemed complex where I could write a few lines of bash
+      (who hasn't said that to themselves?) So I started a script that
+      automated the install - this served to:
+
+         document the stack and software
+         fix versions of most of our dependencies
+         automate(!)
+
+      Process took me 1-2 days to get going
+
+      Few weeks later had to do a 3rd workstation.  Took ~2hrs => win!
+
+      Got Virtual Hosting Slices, <2hs to set each one up (win!)
+
+      Demo Time: Fast Fwd to Oct 2009, Hotel Ballroom in Manhattan (NYC)
+
+      Oops! provider has issues 2 days before.  Gulp!
+
+      9am decision is made to procure backup box with another hosting provider,
+      get additional domain name, SSL cert, etc.
+
+      ~1pm, full stack is installed, tested, up and running
+
+      Demo goes off w/o too many hitches.
+      
+    In Jan/Feb of 2010 timeframe we started migrating the hokey bash script to Chef.
+
+    I joined a startup in May of this year.  Decided to start with Chef right
+    off the bat.  No more bash, use a real tool.
+
+In Retail it's "Location! Location! Location!"
+
+In Systems it's "Automation! Automation! Automation!"   (at least it is for me)
+
+    automation saves time / resources
+
+    configuration management: consistency, known states, record of changes
+
+    easy to add new roles, workstations, servers as environments change, as we need capacity
+
+Where I've used Chef:
+
+   Snapclean.me: 1 box, handful of recipies
+     for provisioning & system admin, not for app deployment (using capistrano for that)
+      -- describe the difference I see between the two types of tools and why
+
+   Relay: 8 boxes @ softlayer; dev workstation; testing/staging/CI/CD environment at Linode
+      multiple roles
+      multiple environments
+
+So what is Chef?  Solo vs Server?
+
+Cookbooks, recipes
+
+What's in a cookbook?
+
+Attributes, the recipes
+
+Resources: Packages, Scripts, Files, Templates
+
+Nodes and Roles
+
+
+Conclusions:
+
+    You still need to have discipline.
+
+    Seems to be a trend to define this as a role: devops.
+
+    Some feel 'developers' should not have access to production.  Some feel tasks
+    are better left to system administrators.
+
+    Don't fall into the trap of over engineering!  Keep it lean, manage the
+    provisioning like any other feature set in your organization, stay precient of
+    requiremetns, benefits - the ROI, don't get overly complex initially.
+
+    Practice, Practice, Practice: use Linode/Slicehost accounts (cheap), use
+    virtualbox, use vmware.
+   
+
+    Chef (and Puppet) are DIY toolkits / frameworks, you will have
+    to write / maintain your systems - but it'll have all those advantages
+    (config mgmt, automation, consistency)
+
+      To me these seem like 2nd generation system administration 
+        1st gen: manual + adhoc scripting; single-system automation, not
+          cross-platform (upstart, etc)
+        2nd gen: rise of automation frameworks: standardization of techniques
+          here b/c of the rise of cloud computing - fungible computing resources,
+          starting to support heterogenus coputer resources (different OS flavors)
+        3rd gen: still in the future IMO, software will move toward being aware
+          of being commissioned / decomossioned (i.e. used on a dynamic cloud);
+          we're seeing some of this, but it's not prevelent yet IMO; operating
+          systems (esp linux and the bsd's) will begin to move more toward automation
+
+    Chef is a great force for automaiton, you can use it to keep discipline
+    you can (and should) use it to scale your resources further; making
+    your dev's responsible for helping to ensure production is continuously availble
+    will lead to chanes in your organization - for the better
+
+
+
 h2. References:
 
 * "Trotter's":http://github.com/trotter "Chef OSCON Talk":http://trotter-chef-oscon.heroku.com/#1
+
