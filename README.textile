@@ -120,6 +120,13 @@ Conclusions:
           we're seeing some of this, but it's not prevelent yet IMO; operating
           systems (esp linux and the bsd's) will begin to move more toward automation
 
+          These kinds of dynamic systems do exist, but are largely in advanced
+          'enterprises' or large companies that have the staff / expertiese to
+          do it.  It's expensive as heck - Chef/Puppet are a sign (to me) that
+          the cost of doing this is reducing and people are finding ways of
+          leveraging larger scales of compute resources with smaller teams
+          and budgets and doing interesting things on less margin
+
     Chef is a great force for automaiton, you can use it to keep discipline
     you can (and should) use it to scale your resources further; making
     your dev's responsible for helping to ensure production is continuously availble
