@@ -2,6 +2,7 @@ h1.  Leveraging Chef-Solo for Less than Enterprise Scale Deployments
 
 Some context:
 
+<pre>
       Started at HMS: "here's a screw driver, your desk is in that box, there are
                        your 2 computers here are the install disks"
     
@@ -47,19 +48,23 @@ Some context:
 
     I joined a startup in May of this year.  Decided to start with Chef right
     off the bat.  No more bash, use a real tool.
+</pre>
 
 In Retail it's "Location! Location! Location!"
 
 In Systems it's "Automation! Automation! Automation!"   (at least it is for me)
 
+<pre>
     automation saves time / resources
 
     configuration management: consistency, known states, record of changes
 
     easy to add new roles, workstations, servers as environments change, as we need capacity
+</pre>
 
 Where I've used Chef:
 
+<pre>
    Snapclean.me: 1 box, handful of recipies
      for provisioning & system admin, not for app deployment (using capistrano for that)
       -- describe the difference I see between the two types of tools and why
@@ -67,6 +72,7 @@ Where I've used Chef:
    Relay: 8 boxes @ softlayer; dev workstation; testing/staging/CI/CD environment at Linode
       multiple roles
       multiple environments
+</pre>
 
 So what is Chef?  Solo vs Server?
 
@@ -83,6 +89,7 @@ Nodes and Roles
 
 Conclusions:
 
+<pre>
     You still need to have discipline.
 
     Seems to be a trend to define this as a role: devops.
@@ -117,6 +124,7 @@ Conclusions:
     you can (and should) use it to scale your resources further; making
     your dev's responsible for helping to ensure production is continuously availble
     will lead to chanes in your organization - for the better
+</pre>
 
 
 
