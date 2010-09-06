@@ -7,7 +7,11 @@ Some context:
                        your 2 computers here are the install disks"
     
           Up and running later that afternoon...the other guy not so much...
-    
+
+        ]] developed our own cluster of linux boxes all by hand, perl based system
+        >> started some tools: fast-cluster-run parallel-jobs the 'm' engine
+          >> all ssh / non-blocking IO based
+          >> did the job
     
       My use of Chef started when I was at Algorithmics:
     
@@ -19,15 +23,15 @@ Some context:
 
       At this point my personality balks at repetetive tasks.  I'm alergic, honest I am! :)
 
-      Chef and Puppet seemed complex where I could write a few lines of bash
-      (who hasn't said that to themselves?) So I started a script that
-      automated the install - this served to:
+      Chef and Puppet seemed too complex for a situation where I thought I
+      could just could write a few lines of bash (who hasn't?) So I started a
+      script that automated the install - this served to:
 
-         document the stack and software
-         fix versions of most of our dependencies
-         automate(!)
+         document the stack and software (all the required packages and steps were listed in the script)
+         fix versions of most of our dependencies (provided stability)
+         it automated the set up process
 
-      Process took me 1-2 days to get going
+      Process took me about a day to get going
 
       Few weeks later had to do a 3rd workstation.  Took ~2hrs => win!
 
@@ -133,9 +137,32 @@ Conclusions:
     will lead to chanes in your organization - for the better
 </pre>
 
+h1. What is Chef?
+
+I wish I had more experience with Chef.  I'm able to use it, but I know I'm not
+leveraging all of it's power.  You're seeing me part way through my journey
+with this tool.
+
+Where / When is it appropriate?
+
+Chef is an automation framework.  It is not a menu of node types to choose from.
+
+Nodes, Cookbooks, Recipies, Resources.
+
+Chef decouples the idea of a role (node) from a physical box.  I create a node,
+'app server', but I run it on multiple boxes.
+
+Chef is declarative.  You write recipes that declare the tasks that need to be
+executed.  Your recipes leverage a combination of the node's configuration
+(json or ruby), and what you detect on the machine you're doing the install on.
+
+Need to validate: if 2 resources have the same exact 'name' (description), only
+the first one 'registered' will actually execute.
+
 
 
 h2. References:
 
 * "Trotter's":http://github.com/trotter "Chef OSCON Talk":http://trotter-chef-oscon.heroku.com/#1
+* http://wiki.opscode.com/display/chef/Home
 
