@@ -166,3 +166,11 @@ h2. References:
 * "Trotter's":http://github.com/trotter "Chef OSCON Talk":http://trotter-chef-oscon.heroku.com/#1
 * http://wiki.opscode.com/display/chef/Home
 
+
+h2. Images
+
+h3. Records
+
+* http://www.flickr.com/photos/hryckowian/2176673733/
+* http://www.flickr.com/photos/pokpok/466946915/
+
